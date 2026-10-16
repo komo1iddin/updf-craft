@@ -1,0 +1,37 @@
+# XcodeGen spetsifikatsiyasi: `xcodegen generate` (App/ ichida) UPDFCraft.xcodeproj ni
+# qayta yaratadi. Loyihaning manbasi shu fayl.
+name: UPDFCraft
+options:
+  bundleIdPrefix: com.updfcraft
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+packages:
+  CraftKit:
+    path: ../Packages/CraftKit
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+targets:
+  UPDFCraft:
+    type: application
+    platform: macOS
+    sources:
+      - path: UPDFCraft
+    dependencies:
+      - package: CraftKit
+    settings:
+      base:
+        PRODUCT_NAME: UPDFCraft
+        PRODUCT_BUNDLE_IDENTIFIER: com.updfcraft.app
+        INFOPLIST_FILE: UPDFCraft/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_HARDENED_RUNTIME: YES
+        DEAD_CODE_STRIPPING: YES
+        ARCHS: "$(ARCHS_STANDARD)"

@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A26D27CC107A107D9EE677C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC34B2A33638B7A7B35F0A /* MainMenu.swift */; };
+		667F8D8FCDE7351F83B4B1D2 /* CraftKit in Frameworks */ = {isa = PBXBuildFile; productRef = B53422106CF5D0B4C0E6EBFE /* CraftKit */; };
+		A8F97873EDEAB50214C0EEA1 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31AFF5F67964663C999FB80 /* PageView.swift */; };
+		DDF9B78BB9B2CA5D243FB494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9EA6C026F2F557C0E75EF7 /* AppDelegate.swift */; };
+		DE72AD0DAFFB2DF76E323392 /* CraftDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74FCF9566631B623343E31 /* CraftDocument.swift */; };
+		EF0B3A6F95235747B7B85487 /* DocumentWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457ECF9CB798C45D757161C /* DocumentWindowController.swift */; };
+		F4A49951D07E63ECDA8F6277 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87963D7AAC8758529A18FD39 /* CanvasViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0457ECF9CB798C45D757161C /* DocumentWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentWindowController.swift; sourceTree = "<group>"; };
+		25BC34B2A33638B7A7B35F0A /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		5F74FCF9566631B623343E31 /* CraftDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraftDocument.swift; sourceTree = "<group>"; };
+		7C6658E0B265E67622C47BB8 /* UPDFCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPDFCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87963D7AAC8758529A18FD39 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		A585844999B491AB541F45A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AA9EA6C026F2F557C0E75EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3AC7BB7E026B24B18932385 /* CraftKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CraftKit; path = ../Packages/CraftKit; sourceTree = SOURCE_ROOT; };
+		D31AFF5F67964663C999FB80 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		493B19081348EFE777F09DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667F8D8FCDE7351F83B4B1D2 /* CraftKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41C2811D98596332FD7E0AB0 /* UPDFCraft */ = {
+			isa = PBXGroup;
+			children = (
+				AA9EA6C026F2F557C0E75EF7 /* AppDelegate.swift */,
+				87963D7AAC8758529A18FD39 /* CanvasViewController.swift */,
+				5F74FCF9566631B623343E31 /* CraftDocument.swift */,
+				0457ECF9CB798C45D757161C /* DocumentWindowController.swift */,
+				A585844999B491AB541F45A0 /* Info.plist */,
+				25BC34B2A33638B7A7B35F0A /* MainMenu.swift */,
+				D31AFF5F67964663C999FB80 /* PageView.swift */,
+			);
+			path = UPDFCraft;
+			sourceTree = "<group>";
+		};
+		5458C61EB3C3DCB1DD5B9474 = {
+			isa = PBXGroup;
+			children = (
+				54AE08CAB393406814CCD15E /* Packages */,
+				41C2811D98596332FD7E0AB0 /* UPDFCraft */,
+				F3A834851ED9A74A98A3E703 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54AE08CAB393406814CCD15E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B3AC7BB7E026B24B18932385 /* CraftKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F3A834851ED9A74A98A3E703 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C6658E0B265E67622C47BB8 /* UPDFCraft.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDA398ED1A6822F55041F970 /* UPDFCraft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAACF2CA4995EDA5AD8FF2F3 /* Build configuration list for PBXNativeTarget "UPDFCraft" */;
+			buildPhases = (
+				D8664785CEDF314D6544C2AD /* Sources */,
+				493B19081348EFE777F09DDB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UPDFCraft;
+			packageProductDependencies = (
+				B53422106CF5D0B4C0E6EBFE /* CraftKit */,
+			);
+			productName = UPDFCraft;
+			productReference = 7C6658E0B265E67622C47BB8 /* UPDFCraft.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21D457AFCA15B27AF2284BEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DDA398ED1A6822F55041F970 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 75526CC278D97C7C99F88940 /* Build configuration list for PBXProject "UPDFCraft" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5458C61EB3C3DCB1DD5B9474;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				63B88FE8F34D2D27A4AAA4D7 /* XCLocalSwiftPackageReference "../Packages/CraftKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F3A834851ED9A74A98A3E703 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDA398ED1A6822F55041F970 /* UPDFCraft */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8664785CEDF314D6544C2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF9B78BB9B2CA5D243FB494 /* AppDelegate.swift in Sources */,
+				F4A49951D07E63ECDA8F6277 /* CanvasViewController.swift in Sources */,
+				DE72AD0DAFFB2DF76E323392 /* CraftDocument.swift in Sources */,
+				EF0B3A6F95235747B7B85487 /* DocumentWindowController.swift in Sources */,
+				5A26D27CC107A107D9EE677C /* MainMenu.swift in Sources */,
+				A8F97873EDEAB50214C0EEA1 /* PageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0BAACFE55FF71EF86DF10E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UPDFCraft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.updfcraft.app;
+				PRODUCT_NAME = UPDFCraft;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B889CABA0D142F87E94D6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		665F35364DAE4FF0E621DD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UPDFCraft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.updfcraft.app;
+				PRODUCT_NAME = UPDFCraft;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E70EDF50F30EC19BB72336B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75526CC278D97C7C99F88940 /* Build configuration list for PBXProject "UPDFCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70EDF50F30EC19BB72336B2 /* Debug */,
+				3B889CABA0D142F87E94D6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CAACF2CA4995EDA5AD8FF2F3 /* Build configuration list for PBXNativeTarget "UPDFCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				665F35364DAE4FF0E621DD78 /* Debug */,
+				0BAACFE55FF71EF86DF10E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		63B88FE8F34D2D27A4AAA4D7 /* XCLocalSwiftPackageReference "../Packages/CraftKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/CraftKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B53422106CF5D0B4C0E6EBFE /* CraftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CraftKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 21D457AFCA15B27AF2284BEC /* Project object */;
+}

@@ -1,0 +1,77 @@
+# UPDF Craft M0 CI: PDFium + craftcore → harness smoke test → CraftKit testlari → ilova.
+# Qadamlar docs/BUILD.md bilan bir xil; har biri o'z skriptini chaqiradi.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: macOS arm64
+    runs-on: macos-15
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Muhit
+        run: |
+          xcodebuild -version
+          swift --version
+          sw_vers
+          df -h "$GITHUB_WORKSPACE"
+
+      # PDFium checkout (~2.2 GB) va depot_tools revisiya + .gclient bo'yicha keshlanadi.
+      # out/ keshga kirmaydi — har safar toza yig'iladi.
+      - name: PDFium keshi
+        id: pdfium-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            Engine/pdfium
+            !Engine/pdfium/out
+            Engine/depot_tools
+            Engine/.gclient_entries
+            Engine/.gcs_entries
+          key: pdfium-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('Engine/PDFIUM_REVISION', 'Engine/.gclient') }}
+
+      - name: PDFium sync
+        if: steps.pdfium-cache.outputs.cache-hit != 'true'
+        run: Engine/scripts/sync_pdfium.sh
+
+      - name: PDFium + craftcore + harness (arm64)
+        run: Engine/scripts/build_pdfium.sh arm64
+
+      - name: Harness smoke test
+        run: Engine/scripts/smoke_test.sh arm64
+
+      - name: CraftCore.xcframework
+        run: Engine/scripts/build_xcframework.sh
+
+      - name: CraftKit testlari
+        working-directory: Packages/CraftKit
+        run: swift test
+
+      - name: Xcode loyihasi project.yml bilan mos
+        working-directory: App
+        run: |
+          brew install xcodegen
+          xcodegen generate
+          git diff --exit-code -- UPDFCraft.xcodeproj
+
+      - name: UPDFCraft ilovasi
+        working-directory: App
+        run: >
+          xcodebuild -project UPDFCraft.xcodeproj -scheme UPDFCraft
+          -configuration Debug -destination 'platform=macOS'
+          -derivedDataPath ../build/DerivedData
+          CODE_SIGNING_ALLOWED=NO build

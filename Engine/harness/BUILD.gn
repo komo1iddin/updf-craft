@@ -1,0 +1,13 @@
+# harness — CraftCore'ni faqat craftcore.h orqali sinaydigan CLI.
+# PDFium daraxtiga //craftcore_harness sifatida symlink qilinadi.
+
+executable("harness") {
+  output_name = "craft-harness"
+  sources = [ "main.cc" ]
+  deps = [ "//craftcore" ]
+  frameworks = [
+    "CoreFoundation.framework",
+    "CoreGraphics.framework",
+    "ImageIO.framework",
+  ]
+}

@@ -1,0 +1,33 @@
+# CraftCore gn target'lari. Bu papka PDFium daraxtiga //craftcore sifatida symlink
+# qilinadi (Engine/scripts/link_into_pdfium.sh), shuning uchun yo'llar PDFium
+# ildiziga nisbatan yoziladi.
+#
+#   gn gen out/arm64 --root-target=//craftcore ...
+#   ninja -C out/arm64 craftcore harness
+
+import("//pdfium.gni")
+
+config("craftcore_public_config") {
+  include_dirs = [ "//craftcore_include" ]
+}
+
+# libcraftcore.a — PDFium va uning barcha bog'liqliklari ichida (complete static lib).
+# Swift tomoni faqat shu bitta arxiv va craftcore.h bilan link qilinadi.
+static_library("craftcore") {
+  complete_static_lib = true
+  configs -= [ "//build/config/compiler:thin_archive" ]
+  sources = [
+    "//craftcore_include/craftcore.h",
+    "craftcore.cc",
+  ]
+  public_configs = [ ":craftcore_public_config" ]
+  configs += [ "//:pdfium_core_config" ]
+  deps = [ "//:pdfium" ]
+}
+
+group("all") {
+  deps = [
+    ":craftcore",
+    "//craftcore_harness:harness",
+  ]
+}

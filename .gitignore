@@ -1,0 +1,24 @@
+# PDFium checkout (gclient boshqaradi) va asboblar
+/Engine/depot_tools/
+/Engine/pdfium/
+/Engine/.gclient_entries
+/Engine/.gcs_entries
+/Engine/.gclient_previous_*
+/Engine/.cipd/
+/Engine/out/
+/.gclient_sync*.log
+/.build_*.log
+
+# Yig'ilgan artefaktlar
+/Packages/CraftKit/Artifacts/
+/build/
+DerivedData/
+.build/
+.swiftpm/
+xcuserdata/
+*.xcuserstate
+
+.DS_Store
+
+# UPDF statik tahlil artefaktlari (decompile qilingan proprietary kod) — repo'ga kirmaydi
+/evidence/
